@@ -1,4 +1,4 @@
-package com.example.labelcallback;
+package pdbswitchingsample.callback;
 
 import java.io.IOException;
 import java.sql.Connection;
