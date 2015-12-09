@@ -45,6 +45,7 @@ public class CrudServlet extends HttpServlet {
 
 		String ope = request.getParameter("operation");
 		String out = "";
+		String records = "";
 		
 		try {
 			ctx = new InitialContext();
@@ -68,7 +69,7 @@ public class CrudServlet extends HttpServlet {
 				break;
 
 			case "select":
-				out = selecttable(conn);
+				records = selecttable(conn);
 				System.out.println("successfully selected table mytable");
 				out = "successfully selected table mytable<br/>" + out;
 				break;
@@ -98,6 +99,7 @@ public class CrudServlet extends HttpServlet {
 		writer.println("<head><title>pdbswitching</title></head>");
 		writer.println("<body>");
 		writer.println("<p>" + out + "</p>");
+		writer.println("<p id=\"records\">" + records + "</p>");
 		writer.println("<a href=\"index.html\">Go back to index page</a>");
 		writer.println("</html>");
 		writer.close();
