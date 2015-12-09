@@ -96,7 +96,9 @@ public class CrudServlet extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		writer.println("<html>");
 		writer.println("<head><title>pdbswitching</title></head>");
-		writer.println("<body>" + out + "</body>");
+		writer.println("<body>");
+		writer.println("<p>" + out + "</p>");
+		writer.println("<a href=\"index.html\">Go back to index page</a>");
 		writer.println("</html>");
 		writer.close();
 	}
