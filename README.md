@@ -7,11 +7,13 @@ Please note that in order to use multiple PDBs in Oracle Database Cloud Service,
 1. See the wiki and create a hudson job to build the callback jar project.  
 2. Download the jar file from the job result page.
 3. Copy the jar file to ALL of the WebLogic managed server's $DOMAIN_HOME/lib directory. Restart of the server is needed to take affect.
-4. See the wiki for and configure the JDBC datasource to use the callback.
+4. See the wiki to create and configure the JDBC datasource used by the web project. In the configuration, you specify the callback java class. 
  
 ## Building and deploying the web project
 1. See the wiki and create a hudson job to build the web project.
 2. Create a Developer Cloud Deploy configuration to deploy the war file and then execute the deploy.
+
+You can copy the build job and change its context root parameter and pdb name,  and deploy using a different deploy configuration. Then you can have multiple application tenants that use its own PDB. (You need to provision the PDB beforehand )  
 
 ## Using the application
 Access the application with : https://your jcs public address/pdb1  
