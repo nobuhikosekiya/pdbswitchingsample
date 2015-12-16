@@ -19,8 +19,13 @@ You can copy the build job and change its context root parameter and pdb name,  
 Access the application with : https://your jcs public address/pdb1  
 The context root , in this case "pdb1" will change if you specify a different value at the war file build.
 
-The PDB database used by this application will be the one specified at the war file build. So obviously you need the provision a PDB with the same name before accessing by the application.
+The PDB database used by this application will be the one specified at the war file build. So obviously you need the provision a PDB with the same name before accessing by the application.  
+  
+You can deploy multiple applications with different context roots and pdbs like this .
+
+![Multple application tenants](https://github.com/nobuhikosekiya/pdbswitchingsample/wiki/images_readme/browser.png)
 
 ## Running the sample Selenium test case 
 1. See the wiki and create a hudson job that runs the Selenium test.
 2. After job completion, in the job result page, you can see browser screenshots and test reports.
+
